@@ -1,0 +1,348 @@
+{
+  "stride": 10,
+  "time": "20250213-10:20",
+  "maze": {
+    "path": "assets\\village\\maze.json"
+  },
+  "agent_base": {
+    "percept": {
+      "mode": "box",
+      "vision_r": 8,
+      "att_bandwidth": 8
+    },
+    "schedule": {
+      "max_try": 5,
+      "diversity": 5
+    },
+    "think": {
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen3:8b-q4_K_M",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "api_key": ""
+      },
+      "interval": 1000,
+      "poignancy_max": 150
+    },
+    "chat_iter": 4,
+    "associate": {
+      "embedding": {
+        "provider": "ollama",
+        "model": "bge-m3:latest",
+        "base_url": "http://127.0.0.1:11434",
+        "api_key": ""
+      },
+      "retention": 8
+    }
+  },
+  "agents": {
+    "小烏龜": {
+      "config_path": "assets\\village\\agents\\小烏龜\\agent.json",
+      "status": {
+        "poignancy": 49
+      },
+      "schedule": {
+        "create": "20250213-09:30:00",
+        "daily_schedule": [
+          {
+            "idx": 0,
+            "describe": "睡觉",
+            "start": 0,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 1,
+            "describe": "睡觉",
+            "start": 60,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 2,
+            "describe": "睡觉",
+            "start": 120,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 3,
+            "describe": "睡觉",
+            "start": 180,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 4,
+            "describe": "睡觉",
+            "start": 240,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 5,
+            "describe": "睡觉",
+            "start": 300,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 6,
+            "describe": "睡觉",
+            "start": 360,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 7,
+            "describe": "起床",
+            "start": 420,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 8,
+            "describe": "吃早餐",
+            "start": 480,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 9,
+            "describe": "创作油画",
+            "start": 540,
+            "duration": 60,
+            "decompose": [
+              {
+                "idx": 0,
+                "describe": "构思油画主题",
+                "start": 540,
+                "duration": 15
+              },
+              {
+                "idx": 1,
+                "describe": "准备画具与颜料",
+                "start": 555,
+                "duration": 10
+              },
+              {
+                "idx": 2,
+                "describe": "绘制草图",
+                "start": 565,
+                "duration": 15
+              },
+              {
+                "idx": 3,
+                "describe": "绘制主体部分",
+                "start": 580,
+                "duration": 15
+              },
+              {
+                "idx": 4,
+                "describe": "休息并整理工具",
+                "start": 595,
+                "duration": 5
+              }
+            ]
+          },
+          {
+            "idx": 10,
+            "describe": "创作油画",
+            "start": 600,
+            "duration": 60,
+            "decompose": [
+              {
+                "idx": 0,
+                "describe": "构思油画主题",
+                "start": 600,
+                "duration": 5
+              },
+              {
+                "idx": 1,
+                "describe": "准备画布和颜料",
+                "start": 605,
+                "duration": 5
+              },
+              {
+                "idx": 2,
+                "describe": "调色并测试色彩效果",
+                "start": 610,
+                "duration": 10
+              },
+              {
+                "idx": 3,
+                "describe": "绘制油画主体部分",
+                "start": 620,
+                "duration": 20
+              },
+              {
+                "idx": 4,
+                "describe": "添加细节与装饰元素",
+                "start": 640,
+                "duration": 10
+              },
+              {
+                "idx": 5,
+                "describe": "休息调整创作状态",
+                "start": 650,
+                "duration": 5
+              },
+              {
+                "idx": 6,
+                "describe": "整理工具并清洁画具",
+                "start": 655,
+                "duration": 5
+              }
+            ]
+          },
+          {
+            "idx": 11,
+            "describe": "创作油画",
+            "start": 660,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 12,
+            "describe": "吃午饭",
+            "start": 720,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 13,
+            "describe": "学习音乐理论",
+            "start": 780,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 14,
+            "describe": "学习音乐理论",
+            "start": 840,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 15,
+            "describe": "学习音乐理论",
+            "start": 900,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 16,
+            "describe": "照料作物",
+            "start": 960,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 17,
+            "describe": "照料作物",
+            "start": 1020,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 18,
+            "describe": "吃晚饭",
+            "start": 1080,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 19,
+            "describe": "欣赏音乐并作曲",
+            "start": 1140,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 20,
+            "describe": "睡觉",
+            "start": 1200,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 21,
+            "describe": "睡觉",
+            "start": 1260,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 22,
+            "describe": "阅读艺术书籍",
+            "start": 1320,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 23,
+            "describe": "睡觉",
+            "start": 1380,
+            "duration": 60,
+            "decompose": {}
+          }
+        ]
+      },
+      "associate": {
+        "memory": {
+          "event": [
+            "node_8",
+            "node_7",
+            "node_6",
+            "node_5",
+            "node_4",
+            "node_3",
+            "node_2",
+            "node_1"
+          ],
+          "thought": [
+            "node_0"
+          ],
+          "chat": []
+        }
+      },
+      "chats": [],
+      "currently": "小烏龜最近在努力創作藝術，包括畫油畫以及作曲，同時也不忘記讀書學習提升自己。希望未來成爲一個全能藝術家。除此以外還會自己種地。",
+      "action": {
+        "event": {
+          "subject": "小烏龜",
+          "predicate": "此时",
+          "object": "调色并测试色彩效果",
+          "describe": "调色并测试色彩效果",
+          "address": [
+            "the Ville",
+            "家裏",
+            "藝術區",
+            "畫板"
+          ],
+          "emoji": "调色并测试色彩效果"
+        },
+        "obj_event": {
+          "subject": "畫板",
+          "predicate": "此时",
+          "object": "正在被调色测试",
+          "describe": "正在被调色测试",
+          "address": [
+            "the Ville",
+            "家裏",
+            "藝術區",
+            "畫板"
+          ],
+          "emoji": ""
+        },
+        "start": "20250213-10:10:00",
+        "duration": 10
+      },
+      "coord": [
+        6,
+        10
+      ]
+    }
+  },
+  "step": 6
+}
